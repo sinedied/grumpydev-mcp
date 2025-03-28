@@ -11,7 +11,8 @@
     "grumpydev-mcp": "./bin/grumpydev-mcp.js"
   },
   "scripts": {
-    "start": "node ./bin/grumpydev-mcp.js"
+    "start": "node ./bin/grumpydev-mcp.js",
+    "release:check": "semantic-release --dry-run"
   },
   "keywords": [
     "mcp",
@@ -32,6 +33,10 @@
     "url": "https://github.com/sinedied/grumpydev-mcp/issues"
   },
   "license": "MIT",
+  "release": {
+    "extends": "semantic-release-npm-github",
+    "branches": "main"
+  },
   "engines": {
     "node": ">=20.11.0"
   },
@@ -39,5 +44,9 @@
     "bin",
     "genaisrc",
     "docs"
-  ]
+  ],
+  "devDependencies": {
+    "semantic-release": "^24.2.3",
+    "semantic-release-npm-github": "^5.0.0"
+  }
 }
