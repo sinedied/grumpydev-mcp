@@ -1,6 +1,6 @@
 {
   "name": "grumpydev-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Let the grumpy senior dev review your code with this MCP server",
   "type": "module",
   "repository": {

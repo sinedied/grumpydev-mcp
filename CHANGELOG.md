@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/sinedied/grumpydev-mcp/compare/1.0.0...1.0.1) (2025-03-28)
+
+
+### Bug Fixes
+
+* file extension ([d3f0035](https://github.com/sinedied/grumpydev-mcp/commit/d3f003593b52d341e7804f032ba8b7c0615b2c1a))
+
 # 1.0.0 (2025-03-28)
 
 
