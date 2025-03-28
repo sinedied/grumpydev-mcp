@@ -1,0 +1,43 @@
+{
+  "name": "grumpydev-mcp",
+  "version": "1.0.0",
+  "description": "Let the grumpy senior dev review your code with this MCP server",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sinedied/grumpydev-mcp"
+  },
+  "bin": {
+    "grumpydev-mcp": "./bin/grumpydev-mcp.js"
+  },
+  "scripts": {
+    "start": "node ./bin/grumpydev-mcp.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "genai",
+    "genaiscript",
+    "dev",
+    "review",
+    "code-review"
+  ],
+  "author": {
+    "name": "Yohan Lasorsa",
+    "url": "https://github.com/sinedied"
+  },
+  "homepage": "https://github.com/sinedied/grumpydev-mcp",
+  "bugs": {
+    "url": "https://github.com/sinedied/grumpydev-mcp/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "files": [
+    "bin",
+    "genaisrc",
+    "docs"
+  ]
+}
