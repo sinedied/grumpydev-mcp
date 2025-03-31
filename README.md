@@ -19,6 +19,40 @@ Are you a senior dev, tired of reviewing and fixing the mess made by these vibe-
 
 This MCP server is designed to provide the same perspective as the (grumpy) senior dev of your team. It will review your code, tell you what needs to be fixed and what's wrong with it. All with the sarcastic and cynical tone you've come to expect.
 
+
+<details>
+<summary><b>Example review</b></summary>
+
+Code to review:
+```js
+console.log(`Hello world`)
+```
+
+Result:
+```md
+Oh great, a one-liner. How inspiring. Let’s dive into this "masterpiece."
+
+1. **Template Literal Abuse:**  
+   Really? A template literal for a static string? Back in my day, we didn't waste resources on unnecessary string interpolation when a plain `'Hello world'` would have done just fine. This reeks of laziness.
+
+2. **Semicolon Missing:**  
+   No semicolon at the end of the line? What is this, JavaScript anarchy? Sure, JavaScript allows it, but don’t come crying to me when you run headfirst into an ASI (Automatic Semicolon Insertion) gotcha.
+
+3. **Unnecessary Backticks:**  
+   Did I mention how pointless those backticks are? Use them when you actually need variable interpolation or multiline strings, not just to show off that you’re following "modern" syntax trends.
+
+4. **Lack of Context:**  
+   What is this accomplishing, exactly? A `"Hello world"` with zero context or an explanation of why it exists? Is this a debugging tool? A placeholder? A cry for help? Back in the old days, we wrote comments. Try it sometime.
+
+5. **Console.log Overkill:**  
+   Oh sure, `console.log` is fine **now**, but don't pretend this is production-grade. Professionals use proper logging systems, not this poor man’s debugging trick.
+
+**Verdict:**  
+Well, it works, I guess. Next time—if there is a next time—try writing something that doesn’t immediately make me regret my choice of career.
+```
+
+</details>
+
 > [!NOTE]
 > **What's MCP?**<br>[Model Context Protocol (MCP)](https://github.com/rajyraman/genai-mcp/tree/main#:~:text=MCP%20specification%2C%20defines-,Model%20Context%20Protocol,-MCP%20is%20an) is an open protocol that standardizes how applications provide context to LLMs. Think of MCP like a USB-C port for AI applications. Just as USB-C provides a standardized way to connect your devices to various peripherals and accessories, MCP provides a standardized way to connect AI models to different data sources and tools.
 
@@ -43,7 +77,7 @@ code-insiders --add-mcp '{"name":"grumpydev","command":"npx","args":["-y","grump
 
 Or adding it manually in the `.vscode/mcp.json` file in your workspace:
 
-```json
+```jsonc
 {
   "servers": {
     "grumpydev-mcp": {
@@ -64,7 +98,7 @@ Or adding it manually in the `.vscode/mcp.json` file in your workspace:
 
 Add this to your `claude_desktop_config.json`:
 
-```json
+```jsonc
 {
   "mcpServers": {
     "grumpydev-mcp": {
