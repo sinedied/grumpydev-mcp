@@ -1,0 +1,32 @@
+name: Review issue
+on:
+  issues:
+    types: [created, opened, reopened, edited]
+
+concurrency:
+  group: issue-${{ github.event.issue.number }}
+  cancel-in-progress: true
+
+env:
+  GENAISCRIPT_DEFAULT_MODEL: 'ollama/phi3.5'
+
+jobs:
+  review:
+    if: github.event.comment.user.login != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Start Ollama
+        run: docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama -e OLLAMA_FLASH_ATTENTION=1 -e OLLAMA_KV_CACHE_TYPE=q8_0 ollama/ollama
+      - name: Review issue with GenAIScript
+        run: npx -y genaiscript@latest run review-issue --pull-request-comment --out-trace $GITHUB_STEP_SUMMARY
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ISSUE: ${{ github.event.issue.number }}
