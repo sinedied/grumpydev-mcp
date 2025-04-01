@@ -8,7 +8,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  GENAISCRIPT_DEFAULT_MODEL: 'ollama/phi3.5'
+  GENAISCRIPT_DEFAULT_MODEL: 'ollama/phi4:latest'
 
 jobs:
   review:
