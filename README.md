@@ -6,7 +6,7 @@
 
 [![Open project in GitHub Codespaces](https://img.shields.io/badge/Codespaces-Open-blue?style=flat-square&logo=github)](https://codespaces.new/sinedied/grumpydev-mcp?hide_repo_select=true&ref=main&quickstart=true)
 [![Join Azure AI Community Discord](https://img.shields.io/badge/Discord-Azure_AI_Community-blue?style=flat-square&logo=discord&color=5865f2&logoColor=fff)](https://discord.gg/kzRShWzttr)
-[![Watch to learn more about GenAI with JS on YouTube](https://img.shields.io/badge/YouTube-d95652.svg?style=flat-square&logo=youtube)](https://www.youtube.com/playlist?list=PLlrxD0HtieHi5ZpsHULPLxm839IrhmeDk)
+[![Watch to learn more about GenAI with JS on YouTube](https://img.shields.io/badge/YouTube-GenAI_with_JS-d95652.svg?style=flat-square&logo=youtube)](https://www.youtube.com/playlist?list=PLlrxD0HtieHi5ZpsHULPLxm839IrhmeDk)
 [![NPM version](https://img.shields.io/npm/v/grumpydev-mcp.svg?style=flat-square)](https://www.npmjs.com/package/grumpydev-mcp)
 ![Node version](https://img.shields.io/badge/Node.js->=20-3c873a?style=flat-square)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
