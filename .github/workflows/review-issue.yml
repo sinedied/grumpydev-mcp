@@ -8,9 +8,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  GENAISCRIPT_DEFAULT_MODEL: 'ollama/phi4:latest'
-  OLLAMA_HOST: 'http://localhost:11434'
-  DEBUG: '*'
+  GENAISCRIPT_DEFAULT_MODEL: 'ollama:phi4:latest'
 
 jobs:
   review:
