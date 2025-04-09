@@ -12,6 +12,7 @@
   },
   "scripts": {
     "start": "node ./bin/grumpydev-mcp.js",
+    "test": "npx -y @modelcontextprotocol/inspector npx -y genaiscript mcp --groups mcp",
     "release:check": "semantic-release --dry-run"
   },
   "keywords": [
