@@ -5,6 +5,8 @@
 # Grumpy Senior Developer as MCP server
 
 [![Open project in GitHub Codespaces](https://img.shields.io/badge/Codespaces-Open-blue?style=flat-square&logo=github)](https://codespaces.new/sinedied/grumpydev-mcp?hide_repo_select=true&ref=main&quickstart=true)
+[![Join Azure AI Community Discord](https://img.shields.io/badge/Discord-Azure_AI_Community-blue?style=flat-square&logo=discord&color=5865f2&logoColor=fff)](https://discord.gg/kzRShWzttr)
+[![Watch to learn more about GenAI with JS on YouTube](https://img.shields.io/badge/YouTube-d95652.svg?style=flat-square&logo=youtube)](https://www.youtube.com/playlist?list=PLlrxD0HtieHi5ZpsHULPLxm839IrhmeDk)
 [![NPM version](https://img.shields.io/npm/v/grumpydev-mcp.svg?style=flat-square)](https://www.npmjs.com/package/grumpydev-mcp)
 ![Node version](https://img.shields.io/badge/Node.js->=20-3c873a?style=flat-square)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
@@ -63,15 +65,31 @@ This tool requires [Node.js 20+](https://nodejs.org/en/download/) to be installe
 ### Use with GitHub Copilot
 
 > [!IMPORTANT]
-> MCP support in VS Code and GitHub Copilot currently requires the March update of [VS Code Insiders](https://code.visualstudio.com/insiders/) or later. You can install the Insiders version alongside your regular version of VS Code.
+> MCP support in VS Code and GitHub Copilot currently requires you [to enable Agent mode](https://code.visualstudio.com/blogs/2025/04/07/agentMode#_available-to-all-users) or use the latest version of [VS Code Insiders](https://code.visualstudio.com/insiders/) or later. You can install the Insiders version alongside your regular version of VS Code.
 
-You can install the MCP server using the following link:
+You can install the MCP server using the following links:
+
+<!--
+// Generate using?:
+const config = JSON.stringify({ name: 'playwright', command: 'npx', args: ["-y", "@playwright/mcp@latest"] });
+const urlForWebsites = `vscode:mcp/install?${encodeURIComponent(config)}`;
+// Github markdown does not allow linking to `vscode:` directly, so you can use our redirect:
+const urlForGithub = `https://insiders.vscode.dev/redirect?url=${encodeURIComponent(urlForWebsites)}`;
+-->
+
+[![Install in VS Code](https://img.shields.io/badge/VS_Code-VS_Code?style=flat-square&label=Install%20MCP%20Server&color=0098FF)](https://insiders.vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522grumpydev%2522%252C%2522command%2522%253A%2522npx%2522%252C%2522args%2522%253A%255B%2522-y%2522%252C%2522grumpydev-mcp%2540latest%2522%255D%257D)
 
 [![Install in VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-VS_Code_Insiders?style=flat-square&label=Install%20MCP%20Server&color=24bfa5)](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522grumpydev%2522%252C%2522command%2522%253A%2522npx%2522%252C%2522args%2522%253A%255B%2522-y%2522%252C%2522grumpydev-mcp%2540latest%2522%255D%257D)
 
 Or by using the command line:
 
 ```bash
+# For VS Code
+code --add-mcp '{"name":"grumpydev","command":"npx","args":["-y","grumpydev-mcp"]}'
+```
+
+```bash
+# For VS Code Insiders
 code-insiders --add-mcp '{"name":"grumpydev","command":"npx","args":["-y","grumpydev-mcp"]}'
 ```
 
