@@ -28,6 +28,6 @@ jobs:
       - name: Start Ollama
         run: docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama -e OLLAMA_FLASH_ATTENTION=1 -e OLLAMA_KV_CACHE_TYPE=q8_0 ollama/ollama
       - name: Review PR with GenAIScript
-        run: npx -y genaiscript@latest run review-pr --pull-request-comment --out-trace $GITHUB_STEP_SUMMARY
+        run: npx -y genaiscript@latest run review-pr --pull-request-reviews --out-trace $GITHUB_STEP_SUMMARY
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
