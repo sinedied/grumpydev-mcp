@@ -7,7 +7,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  GENAISCRIPT_DEFAULT_MODEL: 'ollama:gemma3:4b'
+  GENAISCRIPT_DEFAULT_MODEL: 'ollama:phi4-mini'
 
 jobs:
   review:
