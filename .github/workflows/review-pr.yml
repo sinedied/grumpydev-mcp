@@ -1,7 +1,6 @@
 name: Review PR
 on:
   pull_request:
-    types: [opened, ready_for_review, reopened, edited]
 
 concurrency:
   group: pr-${{ github.workflow }}-${{ github.ref }}
