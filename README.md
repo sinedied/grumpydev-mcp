@@ -135,6 +135,16 @@ Add this to your `claude_desktop_config.json`:
 }
 ```
 
+### Test with MCP inspector
+
+1. In a terminal window, start MCP Inspector:
+    ```bash
+    npx -y @modelcontextprotocol/inspector
+    ```
+2. Ctrl+click to load the MCP Inspector web app from the URL displayed by the app (e.g. http://127.0.0.1:6274)
+3. Set the command to `npx` and the arguments to `-y grumpydev-mcp`, then click on the **Connect** button.
+4. In the **Tools** tab, select **List Tools**. Click on a tool and select **Run Tool**.
+
 ## Model configuration
 
 You can configure the model used by this MCP server by setting the `GENAISCRIPT_DEFAULT_MODEL` environment variable. This variable should contain the provider and name of the model you want to use, such as `github:gpt-4o`. By default, it uses [GitHub Models](https://github.com/marketplace/models) with GPT-4o model.
